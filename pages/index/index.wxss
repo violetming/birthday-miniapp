@@ -1,0 +1,240 @@
+.hero {
+  padding: 12rpx 12rpx 28rpx;
+}
+
+.hero-date {
+  font-size: 40rpx;
+  font-weight: 700;
+  color: #1f2233;
+}
+
+.hero-lunar {
+  margin-top: 6rpx;
+  font-size: 26rpx;
+  color: #8a8f9c;
+}
+
+.tabs {
+  display: flex;
+  background: #eceef5;
+  border-radius: 20rpx;
+  padding: 8rpx;
+  margin-bottom: 24rpx;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: 18rpx 0;
+  font-size: 28rpx;
+  color: #6b7080;
+  border-radius: 14rpx;
+}
+
+.tab.active {
+  background: #fff;
+  color: #ff5d73;
+  font-weight: 600;
+  box-shadow: 0 4rpx 14rpx rgba(31, 34, 51, 0.08);
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #ffe1e6, #fff2f4);
+  border-radius: 24rpx;
+  padding: 28rpx;
+  margin-bottom: 24rpx;
+}
+
+.banner-title {
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #d8384f;
+}
+
+.banner-sub {
+  margin-top: 6rpx;
+  font-size: 24rpx;
+  color: #b96a78;
+}
+
+.banner-btn {
+  flex-shrink: 0;
+  background: #ff5d73;
+  color: #fff;
+  font-size: 26rpx;
+  padding: 14rpx 26rpx;
+  border-radius: 40rpx;
+}
+
+.empty {
+  padding: 140rpx 0;
+  text-align: center;
+}
+
+.empty-title {
+  margin-top: 20rpx;
+  font-size: 32rpx;
+  color: #4a4f5e;
+}
+
+.empty-sub {
+  margin-top: 10rpx;
+  font-size: 26rpx;
+  color: #a0a4b0;
+}
+
+.bcard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32rpx 30rpx;
+  margin-bottom: 22rpx;
+}
+
+.bcard-left {
+  flex: 1;
+  min-width: 0;
+  padding-right: 20rpx;
+}
+
+.bcard-name {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #1f2233;
+}
+
+.bcard-meta {
+  margin-top: 12rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.tag {
+  font-size: 22rpx;
+  color: #ff5d73;
+  background: #ffeef1;
+  border-radius: 8rpx;
+  padding: 4rpx 12rpx;
+  margin-right: 12rpx;
+}
+
+.meta-text {
+  font-size: 25rpx;
+  color: #8a8f9c;
+}
+
+.bcard-note {
+  margin-top: 12rpx;
+  font-size: 24rpx;
+  color: #b0b4c0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bcard-right {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.days {
+  color: #ff5d73;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+
+.days.today {
+  font-size: 40rpx;
+  font-weight: 800;
+}
+
+.days-num {
+  font-size: 52rpx;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.days-unit {
+  font-size: 24rpx;
+  margin-left: 6rpx;
+}
+
+.bcard-occ {
+  margin-top: 10rpx;
+  font-size: 23rpx;
+  color: #a0a4b0;
+}
+
+.bcard-age {
+  margin-top: 6rpx;
+  font-size: 23rpx;
+  color: #ffa1ae;
+}
+
+.cal-btn {
+  position: absolute;
+  right: 26rpx;
+  bottom: 0;
+  font-size: 22rpx;
+  color: #fff;
+  background: #ffb3be;
+  border-radius: 20rpx 20rpx 0 0;
+  padding: 6rpx 18rpx;
+}
+
+.fcard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  margin-bottom: 22rpx;
+}
+
+.fcard-name {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1f2233;
+}
+
+.fcard-type {
+  margin-top: 8rpx;
+  font-size: 22rpx;
+  color: #a0a4b0;
+}
+
+.fcard-right {
+  text-align: right;
+}
+
+.fcard-days {
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #ff5d73;
+}
+
+.fcard-date {
+  margin-top: 8rpx;
+  font-size: 23rpx;
+  color: #a0a4b0;
+}
+
+.fab {
+  position: fixed;
+  right: 48rpx;
+  bottom: 72rpx;
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7a8a, #ff5d73);
+  color: #fff;
+  font-size: 64rpx;
+  line-height: 100rpx;
+  text-align: center;
+  box-shadow: 0 12rpx 30rpx rgba(255, 93, 115, 0.4);
+}

@@ -1,0 +1,103 @@
+.form {
+  padding: 8rpx 30rpx;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100rpx;
+  border-bottom: 2rpx solid #f2f3f7;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row-label {
+  flex-shrink: 0;
+  font-size: 29rpx;
+  color: #4a4f5e;
+}
+
+.row-input {
+  flex: 1;
+  text-align: right;
+  font-size: 29rpx;
+  color: #1f2233;
+}
+
+.row-value {
+  font-size: 29rpx;
+  color: #ff5d73;
+  font-weight: 500;
+  padding-left: 20rpx;
+}
+
+.ph {
+  color: #c2c6d0;
+}
+
+.row-note {
+  align-items: flex-start;
+  padding: 26rpx 0;
+}
+
+.row-textarea {
+  flex: 1;
+  height: 120rpx;
+  margin-left: 20rpx;
+  font-size: 28rpx;
+  color: #1f2233;
+  text-align: right;
+}
+
+.seg {
+  display: flex;
+  background: #eceef5;
+  border-radius: 14rpx;
+  padding: 6rpx;
+}
+
+.seg-item {
+  padding: 12rpx 34rpx;
+  font-size: 27rpx;
+  color: #6b7080;
+  border-radius: 10rpx;
+}
+
+.seg-item.active {
+  background: #fff;
+  color: #ff5d73;
+  font-weight: 600;
+}
+
+.preview {
+  margin-top: 26rpx;
+  padding: 36rpx 30rpx;
+  text-align: center;
+}
+
+.preview-title {
+  font-size: 25rpx;
+  color: #a0a4b0;
+}
+
+.preview-date {
+  margin-top: 14rpx;
+  font-size: 46rpx;
+  font-weight: 800;
+  color: #ff5d73;
+  letter-spacing: 2rpx;
+}
+
+.preview-sub {
+  margin-top: 12rpx;
+  font-size: 27rpx;
+  color: #6b7080;
+}
+
+.actions {
+  margin-top: 48rpx;
+  padding: 0 8rpx;
+}

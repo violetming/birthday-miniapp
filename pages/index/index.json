@@ -1,0 +1,6 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "生日提醒",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark"
+}

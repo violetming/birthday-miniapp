@@ -1,0 +1,85 @@
+<view class="page">
+  <view class="card form">
+    <view class="row">
+      <view class="row-label">姓名</view>
+      <input class="row-input" placeholder="请输入姓名" value="{{form.name}}" bindinput="onName" placeholder-class="ph" />
+    </view>
+
+    <view class="row">
+      <view class="row-label">历法</view>
+      <view class="seg">
+        <view class="seg-item {{form.calendarType==='solar'?'active':''}}" data-v="solar" bindtap="onCalendarType">公历</view>
+        <view class="seg-item {{form.calendarType==='lunar'?'active':''}}" data-v="lunar" bindtap="onCalendarType">农历</view>
+      </view>
+    </view>
+
+    <view class="row">
+      <view class="row-label">{{form.calendarType==='lunar'?'农历月':'月份'}}</view>
+      <picker mode="selector" range="{{monthRange}}" value="{{monthIndex}}" bindchange="onMonth">
+        <view class="row-value">{{monthRange[monthIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="row">
+      <view class="row-label">{{form.calendarType==='lunar'?'农历日':'日期'}}</view>
+      <picker mode="selector" range="{{dayRange}}" value="{{dayIndex}}" bindchange="onDay">
+        <view class="row-value">{{dayRange[dayIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="row" wx:if="{{form.calendarType==='lunar'}}">
+      <view class="row-label">闰月</view>
+      <switch checked="{{form.isLeapMonth}}" color="#ff5d73" bindchange="onLeap" />
+    </view>
+
+    <view class="row">
+      <view class="row-label">出生年份</view>
+      <picker mode="selector" range="{{yearRange}}" value="{{yearIndex}}" bindchange="onYear">
+        <view class="row-value">{{yearRange[yearIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="row">
+      <view class="row-label">关系</view>
+      <picker mode="selector" range="{{relationRange}}" value="{{relationIndex}}" bindchange="onRelation">
+        <view class="row-value">{{relationRange[relationIndex]}}</view>
+      </picker>
+    </view>
+
+    <view class="row">
+      <view class="row-label">系统日历提醒</view>
+      <switch checked="{{form.remind}}" color="#ff5d73" bindchange="onRemind" />
+    </view>
+
+    <block wx:if="{{form.remind}}">
+      <view class="row">
+        <view class="row-label">提醒时间</view>
+        <picker mode="time" value="{{form.remindTime}}" bindchange="onTime">
+          <view class="row-value">{{form.remindTime}}</view>
+        </picker>
+      </view>
+      <view class="row">
+        <view class="row-label">提前提醒</view>
+        <picker mode="selector" range="{{beforeRange}}" value="{{beforeIndex}}" bindchange="onBefore">
+          <view class="row-value">{{beforeRange[beforeIndex]}}</view>
+        </picker>
+      </view>
+    </block>
+
+    <view class="row row-note">
+      <view class="row-label">备注</view>
+      <textarea class="row-textarea" placeholder="选填" value="{{form.note}}" bindinput="onNote" maxlength="100" placeholder-class="ph" />
+    </view>
+  </view>
+
+  <view class="card preview">
+    <view class="preview-title">下次生日</view>
+    <view class="preview-date">{{preview.dateStr}}</view>
+    <view class="preview-sub">{{preview.label}}<text wx:if="{{preview.ageText}}"> · {{preview.ageText}}</text></view>
+  </view>
+
+  <view class="actions">
+    <button class="btn primary" bindtap="onSave">保存</button>
+    <button wx:if="{{isEdit}}" class="btn danger" bindtap="onDelete">删除</button>
+  </view>
+</view>
