@@ -28,6 +28,17 @@ function toDateStr(d) {
   return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate())
 }
 
+function parseDateStr(s) {
+  if (!s || typeof s !== 'string') return null
+  const p = s.split('-')
+  if (p.length !== 3) return null
+  const y = Number(p[0])
+  const m = Number(p[1])
+  const d = Number(p[2])
+  if (!y || !m || !d) return null
+  return makeDate(y, m, d)
+}
+
 function addDays(d, n) {
   const r = new Date(d.getFullYear(), d.getMonth(), d.getDate())
   r.setDate(r.getDate() + n)
@@ -107,6 +118,11 @@ function nextOccurrence(b, from) {
   return nextSolarOccurrence(b.month, b.day, f)
 }
 
+// 严格晚于 from 的下一次生日（用于“补充下一年”，避免又算回今年/今天）
+function occurrenceAfter(b, from) {
+  return nextOccurrence(b, addDays(from, 1))
+}
+
 function ageAt(b, occDate) {
   if (!b.year) return null
   if (b.calendarType === 'lunar') {
@@ -178,12 +194,14 @@ module.exports = {
   makeDate: makeDate,
   today: today,
   toDateStr: toDateStr,
+  parseDateStr: parseDateStr,
   addDays: addDays,
   dayDiff: dayDiff,
   isLeapYear: isLeapYear,
   nextSolarOccurrence: nextSolarOccurrence,
   nextLunarOccurrence: nextLunarOccurrence,
   nextOccurrence: nextOccurrence,
+  occurrenceAfter: occurrenceAfter,
   ageAt: ageAt,
   countdownLabel: countdownLabel,
   lunarDateLabel: lunarDateLabel,

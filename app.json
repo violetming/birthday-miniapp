@@ -6,7 +6,7 @@
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#ff5d73",
-    "navigationBarTitleText": "生日提醒",
+    "navigationBarTitleText": "记得生日",
     "navigationBarTextStyle": "white",
     "backgroundColor": "#f6f7fb"
   },

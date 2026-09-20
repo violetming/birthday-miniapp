@@ -30,6 +30,9 @@ Page({
     const decorated = list.map(function (b) { return dateUtil.decorate(b, from) })
     decorated.forEach(function (b) {
       b.needSync = calendar.needsSync(b, from)
+      b.syncTargetYear = (b.needSync && !dateUtil.canUseYearRepeat(b))
+        ? calendar.targetDate(b, from).getFullYear()
+        : 0
     })
     decorated.sort(function (a, b) { return a.days - b.days })
 

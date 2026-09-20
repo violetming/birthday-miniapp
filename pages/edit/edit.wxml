@@ -59,9 +59,15 @@
         </picker>
       </view>
       <view class="row">
-        <view class="row-label">提前提醒</view>
-        <picker mode="selector" range="{{beforeRange}}" value="{{beforeIndex}}" bindchange="onBefore">
-          <view class="row-value">{{beforeRange[beforeIndex]}}</view>
+        <view class="row-label">提醒次数</view>
+        <picker mode="selector" range="{{countRange}}" value="{{countIndex}}" bindchange="onRemindCount">
+          <view class="row-value">{{countRange[countIndex]}}</view>
+        </picker>
+      </view>
+      <view class="row" wx:for="{{offsetRows}}" wx:key="key">
+        <view class="row-label">{{item.label}}</view>
+        <picker mode="selector" range="{{beforeRange}}" value="{{item.valueIndex}}" data-index="{{index}}" bindchange="onOffset">
+          <view class="row-value">{{beforeRange[item.valueIndex]}}</view>
         </picker>
       </view>
     </block>

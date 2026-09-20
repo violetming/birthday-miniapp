@@ -43,12 +43,13 @@
   },
   "compileType": "miniprogram",
   "libVersion": "3.0.0",
-  "appid": "wx8522aa86e6c7d96c",
-  "projectname": "birthday-miniapp",
+  "appid": "wx366d0bb2b025b8d1",
+  "projectname": "记得生日",
   "condition": {},
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
   },
-  "simulatorPluginLibVersion": {}
+  "simulatorPluginLibVersion": {},
+  "isGameTourist": false
 }

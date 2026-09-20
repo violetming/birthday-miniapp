@@ -44,7 +44,7 @@
         <view class="bcard-occ">{{item.occDateStr}}</view>
         <view class="bcard-age" wx:if="{{item.ageText}}">{{item.ageText}}</view>
       </view>
-      <view wx:if="{{item.needSync}}" class="cal-btn" catchtap="onSyncOne" data-id="{{item.id}}">加日历</view>
+      <view wx:if="{{item.needSync}}" class="cal-btn" catchtap="onSyncOne" data-id="{{item.id}}">{{item.syncTargetYear ? item.syncTargetYear + '年' : '加日历'}}</view>
     </view>
   </block>
 
